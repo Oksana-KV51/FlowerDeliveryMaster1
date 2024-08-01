@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>Flower Catalog</title>
+ </head>
+ <body>
+ <h2>Flower Catalog</h2>
+ <ul>
+     {% for flower in flowers %}
+     <li>
+         <h3>{{ flower.name }}</h3>
+         <p>{{ flower.description }}</p>
+         <p>{{ flower.price }}</p>
+         <a href="{% url 'add_to_cart' flower.id %}">Add to Cart</a>
+     </li>
+     {% endfor %}
+ </ul>
+ </body>
+ </html>
